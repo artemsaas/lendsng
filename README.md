@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
@@ -11,22 +11,23 @@
     }
 
     window.onload = function () {
-      const offers = [
-        "https://grzvkg.trueamouronline.com/?utm_source=da57dc555e50572d&ban=tiktok&j1=1&s1=212364&s2=2121035", // оффер 1
-        "https://mb9pmr0.vipsthelovehaven.com/lw4h4aw?s1=testTT", // оффер 2
-        "https://mb9pmr0.meethotlove.com/lwyrlwm?s1=testTT2", // оффер 3
-        "https://prev.affomelody.com/VgeE8p"  // оффер 4
-      ];
-
       const desktopRedirect = "https://www.instagram.com/men.click_here0?igsh=d2tleGZ1MzE1eGV4"; // для десктопа
 
       if (isMobile()) {
-        // случайный оффер из 4 (равномерно)
-        const randomOffer = offers[Math.floor(Math.random() * offers.length)];
-        window.location.href = randomOffer;
+        const rand = Math.random() * 100;
+
+        if (rand < 25) {
+          window.location.href = "https://grzvkg.trueamouronline.com/?utm_source=da57dc555e50572d&ban=tiktok&j1=1&s1=212364&s2=2121035"; // оффер 1
+        } else if (rand < 50) {
+          window.location.href = "https://mb9pmr0.vipsthelovehaven.com/lw4h4aw?s1=testTT"; // оффер 2
+        } else if (rand < 75) {
+          window.location.href = "https://mb9pmr0.meethotlove.com/lwyrlwm?s1=testTT2"; // оффер 3
+        } else {
+          window.location.href = "https://prev.affomelody.com/VgeE8p"; // оффер 4
+        }
+
       } else {
-        // редирект для ПК
-        window.location.href = desktopRedirect;
+        window.location.href = desktopRedirect; // редирект для ПК
       }
     };
   </script>
